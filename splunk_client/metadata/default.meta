@@ -1,0 +1,13 @@
+
+[]
+access = read : [ * ], write : [ admin, power ]
+export = system
+
+[commands]
+access = read : [ * ], write : [ admin, power ]
+export = system
+
+[transforms]
+access = read : [ * ], write : [ admin, power ]
+export = system
+
