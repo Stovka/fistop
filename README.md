@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```
 ## Run & Shutdown
 ```
-python main.py
+python fistop.py
 // Linux server
 nohup python fistop.py &
 // Or
