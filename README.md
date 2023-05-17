@@ -1,5 +1,6 @@
 ![Python 3.9](https://img.shields.io/badge/Python-3.9-green.svg)
 ![Centos 8](https://img.shields.io/badge/Centos-8-red.svg)
+![Ubuntu 22.04](https://img.shields.io/badge/Ubuntu-22.04-red.svg)
 ![Windows 11](https://img.shields.io/badge/Windows-11-blue.svg)
 
 # Fistop
@@ -15,23 +16,43 @@ Splunk client, Python client or by universal API.
 ### Operating System
 - Windows 10/11
 - Centos 8
+- Ubuntu 22.04
 ### Python Packages
 - fastapi (web framework)
 - uvicorn (HTTP server)
+## Prerequisites
+CentOS 8:
+```
+yum install -y epel-release
+yum install -y python3-pip git
+```
+If you do not have Python or version is lower than 3.9. 
+Then please install newer version according to tutorial: https://linuxstans.com/how-to-install-python-centos/
 
+Ubuntu 22.04:
+```
+apt-get -y update
+apt-get -y upgrade
+apt-get install -y python3 python3-pip python3-venv git
+```
+
+Clone this repository
+```
+git clone https://www.github.com/Stovka/fistop
+```
 ## Install
 ### 1. Create venv (Optional)
 Venv Linux
 ```
 cd fistop
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 ```
 Venv Windows
 ```
 cd fistop
 python -m venv venv
-./venv/Scripts/activate
+venv\Scripts\activate
 ```
 ### 2. Install Packages (fastapi, uvicorn)
 ```
@@ -43,9 +64,9 @@ python fistop.py
 // Linux server
 nohup python fistop.py &
 // Or
-nohup /usr/local/bin/python3.9 fistop.py &
+nohup python fistop.py settings/custom_config.ini &
 // Or
-nohup /usr/local/bin/python3.9 fistop.py settings/custom_config.ini &
+nohup /usr/local/bin/python3.9 fistop.py &
 ```
 ### Shutdown
 Use _ctrl+c_ if you are running it from the console. Use _kill_ (_SIGINT_) when running it in the background. 

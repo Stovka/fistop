@@ -5,7 +5,11 @@ import os
 import queue
 import re
 
-import _queue
+try:
+    import _queue
+except ModuleNotFoundError as err:
+    print("Are you using Python version >3.9? You can check by running command python3")
+    raise err
 import collections
 import sys
 import threading as th
