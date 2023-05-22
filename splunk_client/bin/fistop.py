@@ -12,7 +12,7 @@ from splunk.clilib import cli_common as cli
 
 
 DEFAULT_API = "http://10.8.17.166"
-DEFAULT_TOKEN = "xxxxxxxsplunkxxxxxx"
+DEFAULT_TOKEN = "xxxxxsuperuserxxxxx"
 DEFAULT_LOG_PATH = "."
 
 strftime = "%Y-%m-%dT%H:%M:%S.%fZ"
